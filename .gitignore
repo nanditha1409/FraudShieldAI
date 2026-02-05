@@ -1,0 +1,16 @@
+# Python
+venv/
+__pycache__/
+*.pyc
+.env
+
+# Node
+node_modules/
+npm-debug.log
+
+# OS
+.DS_Store
+
+# Audio files
+*.wav
+*.mp3

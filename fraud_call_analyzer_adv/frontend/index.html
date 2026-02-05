@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FraudShield AI | Advanced Call Analyzer</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="background-blobs">
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+    </div>
+
+    <main class="container">
+        <header>
+            <h1 class="glitch" data-text="FraudShield AI">FraudShield AI</h1>
+            <p class="subtitle">Real-time Multilingual Call Analysis & Threat Detection</p>
+        </header>
+
+        <section class="main-card glass">
+            <div class="input-section">
+                <h3>Start Analysis</h3>
+                <div class="upload-container" id="drop-zone">
+                    <div class="upload-icon">🎙️</div>
+                    <p>Drag & Drop Call Recording or Click to Upload</p>
+                    <input type="file" id="file-input" hidden accept="audio/*">
+                    <button class="btn btn-primary" onclick="document.getElementById('file-input').click()">Browse Files</button>
+                </div>
+
+                <div class="divider"><span>OR</span></div>
+
+                <div class="url-input-container">
+                    <input type="text" id="url-input" placeholder="Enter Audio URL (mp3/wav)..." class="glass-input">
+                    <button class="btn btn-secondary" onclick="analyzeUrl()">Analyze URL</button>
+                </div>
+                
+                <div class="api-settings">
+                    <small>API Key Status: <span id="api-status" class="status-valid">HACKATHON_DEMO_2026</span></small>
+                </div>
+            </div>
+
+            <div class="result-section" id="results" style="display: none;">
+                <div class="risk-summary">
+                    <div class="risk-gauge">
+                        <svg viewBox="0 0 100 100">
+                            <circle class="bg" cx="50" cy="50" r="45"></circle>
+                            <circle class="meter" cx="50" cy="50" r="45" id="risk-circle"></circle>
+                        </svg>
+                        <div class="risk-value">
+                            <span id="risk-score">0%</span>
+                            <small id="risk-label">SAFE</small>
+                        </div>
+                    </div>
+                    <div class="risk-details">
+                        <h2 id="final-verdict">SECURE CALL</h2>
+                        <p id="explain-reason">No suspicious patterns detected in the sample.</p>
+                    </div>
+                </div>
+
+                <div class="data-grid">
+                    <div class="data-card glass-sub">
+                        <h4>Transcript</h4>
+                        <p id="transcript-text" class="italic">Analyzing...</p>
+                    </div>
+                    <div class="data-card glass-sub">
+                        <h4>Acoustic Signals</h4>
+                        <div class="stats">
+                            <div class="stat"><span>Loudness</span><b id="stat-db">-0 dB</b></div>
+                            <div class="stat"><span>Silence</span><b id="stat-silence">0%</b></div>
+                        </div>
+                    </div>
+                    <div class="data-card glass-sub full-width">
+                        <h4>Matched Indicators</h4>
+                        <div id="keywords-list" class="tags"></div>
+                    </div>
+                </div>
+            </div>
+            
+            <div id="loader" class="loader-overlay" style="display: none;">
+                <div class="spinner"></div>
+                <p>AI Engine Processing...</p>
+            </div>
+        </section>
+
+        <footer>
+            <p>&copy; 2026 FraudShield AI - Hackathon Advanced Prototype</p>
+        </footer>
+    </main>
+    <script src="main.js"></script>
+</body>
+</html>

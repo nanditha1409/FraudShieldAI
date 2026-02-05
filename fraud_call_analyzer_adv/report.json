@@ -1,0 +1,38 @@
+[
+  {
+    "filename": "sample.wav.mp3",
+    "transcript": "we are calling from SBI your account is blocked please share your OTP right now",
+    "acoustics": {
+      "avg_db": -18.17,
+      "silence_ratio": 0.17,
+      "duration_sec": 7.03
+    },
+    "classification": "MEDIUM",
+    "confidence": 0.4,
+    "reason": "Detected MEDIUM Risk Keywords: otp"
+  },
+  {
+    "filename": "sample2.wav.mp3",
+    "transcript": "good morning mam your delivery packages arrived",
+    "acoustics": {
+      "avg_db": -20.39,
+      "silence_ratio": 0.24,
+      "duration_sec": 3.5
+    },
+    "classification": "SAFE",
+    "confidence": 0.0,
+    "reason": "No suspicious patterns detected"
+  },
+  {
+    "filename": "short_test_sample.mp3",
+    "transcript": "we are calling from SBI your account is blocked please",
+    "acoustics": {
+      "avg_db": -18.28,
+      "silence_ratio": 0.13,
+      "duration_sec": 5.0
+    },
+    "classification": "SAFE",
+    "confidence": 0.0,
+    "reason": "No suspicious patterns detected"
+  }
+]
