@@ -18,7 +18,7 @@ import { LinearGradient } from 'expo-linear-gradient';
 // API CONFIG (MANDATORY SHAPE)
 // ==============================
 export const API_CONFIG = {
-  BASE_URL: 'http://localhost:5000',
+  BASE_URL: 'https://fraudshieldai-i5u4.onrender.com',
   API_KEY: process.env.EXPO_PUBLIC_API_KEY || 'fraud_detection_api_key_2026',
   TIMEOUT: 60000,
   ENDPOINTS: {
